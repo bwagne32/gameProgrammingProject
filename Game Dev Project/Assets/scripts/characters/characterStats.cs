@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class character : MonoBehaviour
+public class characterStats : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string name_;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public int movementDistance_;
+
+    public int health_;
+    public int attack_;
+    public int speed_;
+    public int luck_;
+    public int defence_;
+       
+    public Sprite Portrait_;
+    public Sprite Mugshot_;
+    public Sprite MapSprite_;
+
+    public RuntimeAnimatorController BattleSprite_;
+    public weapon weapon_;
 }
