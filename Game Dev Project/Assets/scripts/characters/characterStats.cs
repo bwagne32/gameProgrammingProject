@@ -19,5 +19,5 @@ public class characterStats : ScriptableObject
     public Sprite MapSprite_;
 
     public RuntimeAnimatorController BattleSprite_;
-    public weapon weapon_;
+    public Weapon Weapon_;
 }

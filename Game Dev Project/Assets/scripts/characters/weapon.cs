@@ -2,23 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum weaponType{
-    sword,
-    lance,
-    axe,
-    bow,
-    gun
-}
 
 
 
-public class weapon : ScriptableObject
+
+public class Weapon : ScriptableObject
 {
     public int Attack, Hit, Crit, Weight;
 	public int Range;
 
 	public string AnimationKey;
-	public weaponType Type;
+	weaponType Type;
 
 
 
@@ -26,7 +20,7 @@ public class weapon : ScriptableObject
 
 	public bool hasAdvantage;
 
-	public double weaponAdvantage(weapon otherUnit, weaponType otherWeapon)
+	public double weaponAdvantage(Weapon otherUnit, weaponType otherWeapon)
 	{
         double effectiveness = 1; 
         switch(Type){
