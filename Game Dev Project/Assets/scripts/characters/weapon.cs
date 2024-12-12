@@ -12,13 +12,13 @@ public enum weaponType{
 
 
 
-public class weapon : weapon
+public class weapon : ScriptableObject
 {
     public int Attack, Hit, Crit, Weight;
 	public int Range;
 
 	public string AnimationKey;
-	public WeaponType Type;
+	public weaponType Type;
 
 
 
@@ -26,9 +26,9 @@ public class weapon : weapon
 
 	public bool hasAdvantage;
 
-	public int weaponAdvantage(weapon otherUnit, WeaponType otherWeapon)
+	public double weaponAdvantage(weapon otherUnit, weaponType otherWeapon)
 	{
-        float effectiveness = 1; 
+        double effectiveness = 1; 
         switch(Type){
             case(weaponType.sword):
                 if(otherUnit.Type == weaponType.lance) effectiveness -= .5;
